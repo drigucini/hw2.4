@@ -1,15 +1,14 @@
 package pro.sky.skyprocalculatordrigucini;
 
 public interface CalculatorService {
-    String welcome();
 
     String welcomeCalculator();
 
-    String calculatorPlus(int num1, int num2);
+    String calculatorPlus(Integer num1, Integer num2);
 
-    String calculatorMinus(int num1, int num2);
+    String calculatorMinus(Integer num1, Integer num2);
 
-    String calculatorMultiply(int num1, int num2);
+    String calculatorMultiply(Integer num1, Integer num2);
 
-    String calculatorDivide(int num1, int num2);
+    String calculatorDivide(Integer num1, Integer num2);
 }

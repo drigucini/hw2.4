@@ -5,32 +5,44 @@ import org.springframework.stereotype.Service;
 @Service
 public class CalculatorServiceIml implements CalculatorService {
 
-    public String welcome() {
-        return "Welcome";
-    }
-
     public String welcomeCalculator() {
         return "Welcome to the <b>calculator</b>";
     }
 
 
-    public String calculatorPlus(int num1, int num2) {
-        int result = num1 + num2;
+    public String calculatorPlus(Integer num1, Integer num2) {
+        if (num1 == null || num2 == null) {
+            return "Please input two parameters";
+        }
+        Integer result = num1 + num2;
         return num1 + " + " + num2 + " = " + result;
     }
 
-    public String calculatorMinus(int num1, int num2) {
-        int result = num1 - num2;
+    public String calculatorMinus(Integer num1, Integer num2) {
+        if (num1 == null || num2 == null) {
+            return "Please input two parameters";
+        }
+        Integer result = num1 - num2;
         return num1 + " - " + num2 + " = " + result;
     }
 
-    public String calculatorMultiply(int num1, int num2) {
-        int result = num1 * num2;
+    public String calculatorMultiply(Integer num1, Integer num2) {
+        if (num1 == null || num2 == null) {
+            return "Please input two parameters";
+        }
+
+        Integer result = num1 * num2;
         return num1 + " * " + num2 + " = " + result;
     }
 
-    public String calculatorDivide (int num1, int num2) {
-        int result = num1 / num2;
+    public String calculatorDivide (Integer num1, Integer num2) {
+        if (num1 == null || num2 == null) {
+            return "Please input two parameters";
+        }
+        if (num2 == 0) {
+            return "Dividing by 0 is prohibited";
+        }
+        Integer result = num1 / num2;
         return num1 + "/" + num2 + " = " + result;
     }
 
